@@ -1,29 +1,6 @@
-#include "MichelTriggerDecision.h"
+//#include "MichelTriggerDecision.h"
 
-int MichelTriggerDecision(vector<vector<int>> candidates){
-  prev_channel = -9000;
-  prev_time = -9000;
-  int nChannels = 2560;
-  int last_APA = -9000;
-  vector<int> Michel_candidates; 
-  for (unsigned int i_candidate = 0; i_candidate< candidates.size(); i++){
-    //check if the last channel in the trigger candidates is not at the end of the APA and previous trigger
-    //candidates is also in the same APA
-    if (candidates.at(i_candidate).at(6) < nChannels and last_APA == candidates.at(i_candidate).at(8)){
-      Michel_candidates.push_back(i_candidate);
-    
-    }//check end channel of trigger candidates
-    
-   // else if (candidates.at(i_candidate).at(6) < nChannels and last_APA == canda){
-    
-    //}
-    
-    prev_channel = candidates.at(i_candidate).at(6);
-    prev_time = candidates.at(i_candidate).at(7);
-  
-  }//finish looping through the trigger candidates
-  return 0;
-}
+//int MichelTriggerDecision(vector<vector<int>> candidates){
 
 
 //some standard C++ includes
