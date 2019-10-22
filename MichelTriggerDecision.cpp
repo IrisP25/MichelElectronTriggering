@@ -166,11 +166,11 @@ void newMichelTrigger(){
     //std::cout << tp1_index <<std::endl;
     //std::cout << tp2_index << std::endl;
     
-    std::vector<TriggerCandidate> trigger_hits;
+    std::vector<TP> trigger_hits;
     trigger_hits.reserve(tp2_index - tp1_index +1 );
     for (int i_tp = tp1_index; i_tp < tp2_index +1; i_tp++){
         trigger_hits.emplace_back(tpset.tps[i_tp]);
-        std::cout <<trigger_hits.at(trigger_hits.size()-1).first_time << " " << trigger_hits.size()<< std::endl;
+        //std::cout <<trigger_hits.at(trigger_hits.size()-1).first_time << " " << trigger_hits.size()<< std::endl;
     }
     //now we proceed to calculate linearity and dqds..
     //i will add this 
