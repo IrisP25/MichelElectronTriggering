@@ -1,11 +1,11 @@
+//some standard C++ includes
 #include <iostream>
 #include <stdlib.h>
 #include <string>
 #include <sstream>
 #include <vector>
 #include <algorithm>
-#include <cmath>
+#include <iomanip>
+#include <fstream>
 
-using namespace std;
-
-int MichelTriggerDecision(vector<vector<int>> candidates);
+int MichelTriggerModule(std::vector<TriggerCandidate> candidates)
